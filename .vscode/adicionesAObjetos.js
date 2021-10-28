@@ -63,3 +63,40 @@ console.log("==== 5 contra 5 ====")
 
 console.log(Object.is(5, 5));
 console.log(Object.is(5, "5"));
+
+//Nuevo metodo Object.assing(); 
+//Nos sirve para setear las propiedades de un objeto a otro.
+var objectReceptor = {};
+var objectDonador = {
+	//nombre: "Mi archivo.js"
+	get nombre(){
+		return "Mi nuevo archivo.js"
+	}
+};
+
+console.log(Object.assign(objectReceptor, objectDonador));
+
+
+//Orden de enumeracion de las propiedades de un objeto.
+var obj = {
+	c: 1,
+	0: 1,
+	x: 1,
+	15: 1,
+	r: 3,
+	3: 1,
+	b: 1
+};
+
+//le agrego valores al objeto en tiempo de ejecucion y me los ordena tambien.
+obj.d = 1;
+obj["1"] = 1;
+obj["a"] = 1;
+
+console.log(Object.getOwnPropertyNames(obj).join(", "));
+console.log(Object.keys(obj));
+console.log(JSON.stringify(obj));
+
+for(i in Object.keys(obj)){
+	console.log(Object.keys(obj)[i]);
+};

@@ -20,8 +20,8 @@ console.log(items.size);
 
 console.log(items);
 
-//Set de aarray
-let item = new Set([1,2,3,3,3,3,3,3]);
+//Set de array
+let item = new Set([1, 2, 3, 3, 3, 3, 3, 3]);
 
 console.log(items.size);
 console.log(item);
@@ -37,20 +37,20 @@ console.log(item);
 item.clear();
 
 //Convertir set de datos a array.
-let numeros = [1,2,3,4,5,7,9,12];
+let numeros = [1, 2, 3, 4, 5, 7, 9, 12];
 
 let setNumeros = new Set(numeros);
 console.log(numeros);
 
 
 //Eliminar duplicados invocando a una funcion.
-let numerosArray = [1,2,3,4,5,7,9,3,2];
+let numerosArray = [1, 2, 3, 4, 5, 7, 9, 3, 2];
 
 let arrayNumeros = eliminarDuplicados(numerosArray);
 
 console.log(arrayNumeros);
 
-function eliminarDuplicados(items){
+function eliminarDuplicados(items) {
 	//Con esta linea elimino duplicados.
 	return [...new Set(items)];
 };

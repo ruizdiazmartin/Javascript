@@ -40,7 +40,7 @@ for (let i = 0; i < num.length; i++) {
 	console.log(num[i]);
 }
 
-//Ciclo for in que tambuien existia y obtengo el mismo resultado que el ciclo for tradicional.
+//Ciclo for in que tambien existia y obtengo el mismo resultado que el ciclo for tradicional.
 for (let nu in num) {
 	console.log(num[nu]);
 };

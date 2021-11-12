@@ -71,5 +71,5 @@ console.log(simbolos);
 
 for(i in simbolos){
 	console.log(simbolos[i], Symbol.keyFor(simbolos[i]));
-}
+};
 

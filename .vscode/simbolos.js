@@ -12,7 +12,7 @@ persona[primerNombre] = "Dylan";
 
 console.log(persona[primerNombre], persona[segundoNombre]);
 
-//Si imprimomos lo siguiente nos va a dar false, porque con Simbol nada es igual mas alla que nos parezca que si.
+//Si imprimimos lo siguiente nos va a dar false, porque con Simbol nada es igual mas alla que nos parezca que si.
 let simbolo1 = Symbol("igual");
 let simbolo2 = Symbol("igual");
 

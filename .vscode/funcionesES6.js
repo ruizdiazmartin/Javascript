@@ -21,7 +21,7 @@
 // saludo();
 
 
-//ES6 parametros opcionales lo declaro cuando recibe el metodoe, siempre declaro primero los parametros obligatorios.
+//ES6 parametros opcionales lo declaro cuando recibe el metodo, siempre declaro primero los parametros obligatorios.
 // function saludo(mensaje, tiempo = 1500){
 
 // 	setTimeout(function(){
@@ -32,7 +32,7 @@
 // saludo();
 
 //En ES6 los parametros ademas pueden ser variables de distintos tipos o funciones, objetos o arrays tambien.
-//En la siguiente funcion recibe por parametro una funcion y lo pongo los parentesis de la misma porque solo ejecuta.
+//En la siguiente funcion recibe por parametro una funcion y no pongo los parentesis de la misma porque solo ejecuta.
 // function saludo(fn = fnTemporal){
 
 // 	//Typeof es para saber el valor que recibe la variable.
@@ -95,18 +95,18 @@ suma();*/
 // var alumno_arr2 = agregarAlumno(alumno_arr, "Dylan", "Eduardo");
 
 //Parametrtos REST ES6
-/*function agregarAlumno(alumno_arr, ...alumnos){
-	
+function agregarAlumno(alumno_arr, ...parametroRest){
+
 	console.log(arguments);
 
-	for(let i=0; i < alumnos.length; i++){
-		alumno_arr.push(alumnos[i]);
+	for(let i=0; i < parametroRest.length; i++){
+		alumno_arr.push(parametroRest[i]);
 	}
 	return alumno_arr;
 }
 
 let alumno_arr = ["Martin"];
-let alumno_arr2 = agregarAlumno(alumno_arr, "Dylan", "Eduardo");*/
+let alumno_arr2 = agregarAlumno(alumno_arr, "Dylan", "Eduardo");
 
 
 //Restricciones parametros REST.
@@ -184,16 +184,16 @@ console.log(persona2)*/
 //Diferencia entre SPREAD Y REST.
 // REST junta los elementos en un array.
 // SPREAD esparse los elementos como si fueran enviados en forma separada.
- /*function saludarRest(saludo, ...nombres){
+function saludarRest(saludo, ...nombres){
 
-	for(i in nombres){
-		console.log(` ${saludo} ${nombres[i]}`)
-	}
+   for(i in nombres){
+	   console.log(` ${saludo} ${nombres[i]}`)
+   }
 }
 
 function saludarSpread(saludo, ...nombres){
 
-	console.log(` ${saludo} ${nombres}.`)
+   console.log(` ${saludo} ${nombres}.`)
 
 }
 saludarRest("Hola", "Martin", "Eduardo", "Dylan");
@@ -202,10 +202,10 @@ let personas = ["Carlitos", "Pepito", "Josecito"]
 saludarSpread("Que tal!", personas);
 
 //Es otra forma de juntar propiedades de distintos objetos.
-let partes = ["Brazos", "Piernas"]
+/*let partes = ["Brazos", "Piernas"]
 let cuerpo = ["Cabeza", "Cuello", ...partes, "Pies", "Dedos"]
 
 console.log(cuerpo);*/
 
 
-//Aclarando doble comportamiento de las funciones
+

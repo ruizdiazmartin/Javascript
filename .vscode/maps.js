@@ -1,5 +1,5 @@
 //Mapas y sus metodos.
-let mapa = new Map();
+let mapa = new Map();	
 
 //Agregar elementos al map
 mapa.set("Nombre", "Martin");

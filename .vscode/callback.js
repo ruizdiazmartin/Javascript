@@ -1,7 +1,6 @@
 //llamamos a una funcion mediante callback
 const getUserById = (id, callback) => {
-	"use strict";
-
+	
 	const user = {
 		nombre: "Fernando",
 		id: id
@@ -12,8 +11,6 @@ const getUserById = (id, callback) => {
 	} else {
 		callback(null, user);
 	}
-
-
 };
 
 getUserById(5, (err, usuario) => {
@@ -21,7 +18,6 @@ getUserById(5, (err, usuario) => {
 	if (err) {
 		return console.log(err);
 	}
-
 	console.log(`Usuario de base de datos,`, usuario);
 });
 
@@ -79,7 +75,7 @@ const getSalario = (emple, callbackSalario) => {
 
 //Uso de la funcion callback.
 //Invocamos la funcion GetEmpleado.
-getEmpleado(5, (err, empl) => {
+getEmpleado(3, (err, empl) => {
 	if(err)
 		return console.log(err);
 

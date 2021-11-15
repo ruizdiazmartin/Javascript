@@ -40,9 +40,9 @@ const getEmpleado = (id) => {
 };
 
 //Metodo para obtener el salario del empleado.
-const getSalario =  async (empleado) => {
+const getSalario = async (empleado) => {
 
-	const promesaSalario = await new Promise((resolve, reject) => {
+		return await new Promise((resolve, reject) => {
 	
 		const salarioDB = salarios.find(salario => salario.id === empleado.id);
 
@@ -54,13 +54,12 @@ const getSalario =  async (empleado) => {
 				salario: salarioDB.salario,
 				id: empleado.id
 			});
-		}
-		return promesaSalario;			
+		}		
 	})
 };
 
 //Invoco la funcion que retorna una promesa del empleado y luego invoco otra promesa que retorna el salario del empleado.
-getEmpleado(2)
+getEmpleado(1)
 	.then(getSalario)
 	.then(console.log)
 .catch(err => {

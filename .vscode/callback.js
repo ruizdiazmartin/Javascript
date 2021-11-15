@@ -74,8 +74,7 @@ const getSalario = (emple, callbackSalario) => {
 			salario: salarioDB.salario,
 			id: emple.id
 		});
-	}
-		
+	}		
 };
 
 //Uso de la funcion callback.

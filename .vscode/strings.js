@@ -1,4 +1,4 @@
-var saludo = "Hola Martin";
+/*var saludo = "Hola Martin";
 
 //Esto es en javascript tradicional
 console.log(saludo.substr(0,1) === "h");
@@ -60,7 +60,7 @@ console.log(nombreCompleto1);
 let multilinea = `<h1 class="algo">Hola ${nombre}</h1>
 <p>${apellido}</p>`;
 
-console.log(multilinea);
+console.log(multilinea);*/
 
 
 //Llamo a una funcion etiqueta y lo concateno al template literals(string)

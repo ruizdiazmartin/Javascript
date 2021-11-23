@@ -1,5 +1,5 @@
 //Funcion que retorna tres propiedades ES5
-function crearPersonaES5 (nombre, apellido, edad){
+function crearPersonaES5(nombre, apellido, edad) {
 	return {
 		nombre: nombre,
 		apellido: apellido,
@@ -8,7 +8,7 @@ function crearPersonaES5 (nombre, apellido, edad){
 }
 
 //Funcion que retorna tres propiedades ES5
-function crearPersonaES6 (nombre, apellido, edad){
+function crearPersonaES6(nombre, apellido, edad) {
 	return {
 		nombre,
 		apellido,
@@ -42,22 +42,25 @@ console.log(persona["Primer nombre"]);
 console.log(persona["Segundo" + nombrePersona]);
 
 //Nuevo metodo Object.is();
-//Sirve para asegurarnos mas al comparar.
-console.log( +0 == -0);
-console.log( +0 === -0);
+//Sirve para asegurarnos mas al comparar, es mas restrictivo.
+//En difinita el Object.is es igual a === salvo en los casos que se compara (+0 con -0 o NaN, NaN)
+//Object.is() se usa especialemente para comprar (+0 con -0 o NaN, NaN) ya que nos da un resultado distinto que si lo hacemos con ===
+
+console.log(+0 == -0);
+console.log(+0 === -0);
 console.log(Object.is(+0, -0));
 
 console.log("====");
 
-console.log( NaN == NaN);
-console.log( NaN === NaN);
+console.log(NaN == NaN);
+console.log(NaN === NaN);
 console.log(Object.is(NaN, NaN));
 
 console.log("====");
 
 //Con == compara si es el mismo valor, y con === compara si es el mismo valor y tipo.
-console.log( 5 == 5);
-console.log( 5 === "5");
+console.log(5 == 5);
+console.log(5 === "5");
 
 console.log("==== 5 contra 5 ====")
 
@@ -69,7 +72,7 @@ console.log(Object.is(5, "5"));
 var objectReceptor = {};
 var objectDonador = {
 	//nombre: "Mi archivo.js"
-	get nombre(){
+	get nombre() {
 		return "Mi nuevo archivo.js"
 	}
 };
@@ -97,6 +100,6 @@ console.log(Object.getOwnPropertyNames(obj).join(", "));
 console.log(Object.keys(obj));
 console.log(JSON.stringify(obj));
 
-for(i in Object.keys(obj)){
+for (i in Object.keys(obj)) {
 	console.log(Object.keys(obj)[i]);
 };

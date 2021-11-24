@@ -25,7 +25,7 @@ const salarios = [{
 //Metodo para obtener un empleado.
 const getEmpleado = async (id) => {
 
-	const empleadoDB = empleados.find(empleado => empleado.id === id);
+	const empleadoDB = await empleados.find(empleado => empleado.id === id);
 
 	if (!empleadoDB) {
 		throw new Error(`No existe el empleado con el id ${id}`);
@@ -37,7 +37,7 @@ const getEmpleado = async (id) => {
 //Metodo para obtener el salario del empleado.
 const getSalario = async (empleado) => {
 
-	const salarioDB = salarios.find(salario => salario.id === empleado.id);
+	const salarioDB = await salarios.find(salario => salario.id === empleado.id);
 
 	if (!salarioDB)
 		throw new Error(`No existe un salario para el empleado con el nombre ${empleado.nombre}`);

@@ -60,7 +60,7 @@ console.log(VALORES1);
 
 //Si quiero agregar valores a un array por ejemplo no debo hacerlo de la siguiente manera.
 const VALORES2 = [3, 4, 6, 8, 9];
-VALORES2 = [2, 5, 7];
+//VALORES2 = [2, 5, 7];
 
 console.log(VALORES2);
 

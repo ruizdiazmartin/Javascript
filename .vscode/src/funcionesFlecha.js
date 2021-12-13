@@ -62,7 +62,8 @@ let obtenerLibro1 = id => ({ id: id, nombre: "Harry" })
 
 console.log(obtenerLibro(2), obtenerLibro1(5));
 
-//Una funcion anonima es cuando de ejecuta inmediatamente despues de crearla.
+//Una funcion anonima es cuando la funcion no tiene nombre.
+//Los parentesis del final es cuando la funcion se autoejecuta sin ser llamada.
 //Funcion anomina en ES5
 var saludo = function (nombre) {
 	return "Hola " + nombre;

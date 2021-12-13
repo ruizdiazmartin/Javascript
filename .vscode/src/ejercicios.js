@@ -34,6 +34,7 @@ console.log(+0 == -0);
 console.log(+0 === -0);
 console.log(Object.is(+0, -0));*/
 
+/*
 console.log('===========');
 
 //Podemos recorrer un Set de propiedades tambien con el ciclo for of.
@@ -71,4 +72,49 @@ console.log('===========');
 
 for (let i in peopleMap) {
 	console.log(peopleMap[i]);
-}
+}*/
+
+/*//Ejercicio de logica
+const a = 1;
+function suma() {
+	const b = 2;
+	return suma2();
+};
+
+const b = 3;
+const c = 2;
+function suma2() {
+	const c = 3;
+	return a + b + c;
+};
+
+console.log(suma());*/
+
+//Ejercicio de Closure.
+/*function closure() {
+	const a = 1;
+	function closureIn() {
+		const b = 2;
+		return a + b;
+	}
+	return closureIn();
+};
+*/
+
+var bunny = {
+	names: 'Martin',
+	tasks: ['pepe', 'papo', 'pipo'],
+	showTask: function () {
+		const name = this.names;
+		this.tasks.forEach(function (task) {
+			console.log(name + ' wants to ' + task);
+		});
+	},
+};
+console.log('pep');
+
+
+
+
+
+

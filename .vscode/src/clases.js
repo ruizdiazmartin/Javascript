@@ -96,7 +96,7 @@ class TipoPersona {
 		return new TipoPersona(nombre);
 	}
 	//Creo metodo computado a travez de la variable creada anteriormente fuera de la clase.
-	[metodoComputado](){
+	[metodoComputado]() {
 		console.log(this.nombre.toUpperCase());
 	}
 };
@@ -115,22 +115,22 @@ console.log(NuevaPersona);
 
 //Herencia de clases.
 class Rectangulo {
-	constructor(alto, largo){
+	constructor(alto, largo) {
 		//inicializo las propiedades.
 		this.alto = alto;
 		this.largo = largo;
 	}
-	getArea(){
+	getArea() {
 		return this.alto * this.largo;
 	}
 };
 
-let rectacgulo = new Rectangulo(10,15);
+let rectacgulo = new Rectangulo(10, 15);
 console.log(rectacgulo.getArea());
 
 //Heredo de la clase Rectangulo
-class Cuadrados extends Rectangulo{
-	constructor(alto){
+class Cuadrados extends Rectangulo {
+	constructor(alto) {
 
 		//Al invocar el metodo supper herede el constructor del padre.
 		super(alto, alto);
